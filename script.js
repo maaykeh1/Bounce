@@ -25,7 +25,7 @@ function draw() {
   // Kleur de achtergrond blauw, zodat je het kunt zien
   background(231, 199, 255;
   // stel vulkleur in
-  fill(100, 100, 255);
+  fill(100, 101, 255);
 
   // teken een cirkel
   ellipse(x,y,80,80);
