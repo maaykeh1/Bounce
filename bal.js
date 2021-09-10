@@ -1,8 +1,8 @@
 class Bal{
- x;
- y;
- speedX;
- speedY;
+ x; _x
+ y; _y
+ speedX; 3
+ speedY; 2
 
  constructor(_x, _y){
     this.x = _x;
