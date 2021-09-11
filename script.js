@@ -1,7 +1,7 @@
-var x = 50;
-var y = 50;
-var speedX = 2;
-var speedY = 5;
+var x = [50, 100, 150, 200, 250];
+var y = [50, 100, 150, 200, 250];
+var speedX = [2, 5, 15, 20, 25];
+var speedY = [5, 2, 7, 9, 12];
 /**
  * setup
  * de code in deze functie wordt één keer uitgevoerd door
@@ -10,6 +10,7 @@ var speedY = 5;
 function setup() {
   // Maak een canvas (rechthoek) waarin je je speelveld kunt tekenen
   createCanvas(1280, 720);
+
 }
 /**
  * draw
@@ -23,11 +24,25 @@ function draw() {
   fill(255, 255, 255);
   // teken een cirkel
   ellipse(x, y, 80, 80);
-  //positie updaten
-  x = x + speedX;
-  y = y + speedY;
-  // laat stuiteren tegen de onderkant
-  if (y === 720) {
-    speedY = speedY * -1;
+  
+  for (let i = 0; i < x.length(); i++)
+  {
+    if(x[i] <= 0 || x[i] >= 1280)
+    {
+      speedX[i] = speedX[i] * -1;
+    }
+
+    if(y[i] <= 0 || y[i] >= 720)
+    {
+     speedY[i] = speedY[i] * -1;
+    }
   }
+
+  //positie updaten 
+ // x = x + speedX;
+ // y = y + speedY;
+  // laat stuiteren tegen de onderkant
+ // if (y === 720) {
+  //  speedY = speedY * -1;
+ // } 
 }
