@@ -9,7 +9,7 @@ class Bal {
       this.y = _y;
       this.speedX = _speedX;
       this.speedY = _speedY;
-    }
+    } 
  
     update() {
       this.x = this.x + this.speedX;
@@ -24,7 +24,7 @@ class Bal {
     }
  
     show() {
-      fill(255, 0, 0);
+      fill(255, 204, 255);
       ellipse(this.x, this.y, 50, 50);
     }
   }
